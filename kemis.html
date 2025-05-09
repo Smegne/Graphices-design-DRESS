@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Enhanced Habesha Kemis Design</title>
+  <style>
+    canvas {
+      background: #fdfbf8;
+      display: block;
+      margin: auto;
+      border: 1px solid #ccc;
+    }
+  </style>
+</head>
+<body>
+  <canvas id="kemisCanvas" width="400" height="600"></canvas>
+
+  <script>
+    const canvas = document.getElementById('kemisCanvas');
+    const ctx = canvas.getContext('2d');
+
+    // Chevron (V-shape) center embroidery
+    function drawChevron(x, y, width, height, color) {
+      ctx.beginPath();
+      ctx.moveTo(x, y);
+      ctx.lineTo(x + width / 2, y + height);
+      ctx.lineTo(x, y + height * 2);
+      ctx.lineTo(x - width / 2, y + height);
+      ctx.closePath();
+      ctx.fillStyle = color;
+      ctx.fill();
+    }
+
+    const chevronColors = ["#FFD700", "#6A5ACD", "#008000", "#FF4500", "#000080", "#800080"];
+    let x = 200;
+    let y = 80;
+    let width = 80;
+    let height = 30;
+
+    for (let i = 0; i < chevronColors.length; i++) {
+      drawChevron(x, y + i * height, width, height, chevronColors[i]);
+    }
+
+    // Side stripes (like sleeve edges)
+    function drawSideStripes(xStart, yStart, spacing, count, color) {
+      ctx.strokeStyle = color;
+      ctx.lineWidth = 4;
+      for (let i = 0; i < count; i++) {
+        ctx.beginPath();
+        ctx.moveTo(xStart, yStart + i * spacing);
+        ctx.lineTo(xStart + 20, yStart + i * spacing);
+        ctx.stroke();
+      }
+    }
+
+    drawSideStripes(40, 80, 20, 20, "#00CED1");
+    drawSideStripes(340, 80, 20, 20, "#FF69B4");
+
+    // Belt pattern - diagonal colorful stripes
+    function drawBelt() {
+      const beltX = 100;
+      const beltY = 420;
+      const beltHeight = 20;
+      const colors = ["#FF69B4", "#00FF7F", "#1E90FF", "#FFD700", "#FF0000"];
+
+      for (let i = 0; i < 15; i++) {
+        ctx.save();
+        ctx.translate(beltX + i * 10, beltY + i * 5);
+        ctx.rotate(-Math.PI / 8);
+        ctx.fillStyle = colors[i % colors.length];
+        ctx.fillRect(0, 0, 10, beltHeight);
+        ctx.restore();
+      }
+    }
+
+    drawBelt();
+
+    // Leaf or vine embroidery
+    function drawLeaf(x, y, scale, color) {
+      ctx.beginPath();
+      ctx.moveTo(x, y);
+      ctx.quadraticCurveTo(x + 10 * scale, y - 20 * scale, x + 20 * scale, y);
+      ctx.quadraticCurveTo(x + 10 * scale, y + 20 * scale, x, y);
+      ctx.fillStyle = color;
+      ctx.fill();
+    }
+
+    drawLeaf(60, 200, 1, "#228B22");
+    drawLeaf(320, 220, 1, "#228B22");
+    drawLeaf(80, 300, 0.8, "#006400");
+    drawLeaf(300, 320, 0.8, "#006400");
+
+    // Zigzag embroidered borders
+    function drawZigzagBorder(startX, startY, height, direction = 1, color = "#000") {
+      ctx.strokeStyle = color;
+      ctx.lineWidth = 2;
+      ctx.beginPath();
+      for (let i = 0; i <= height; i += 10) {
+        const offset = (i / 10) % 2 === 0 ? 5 * direction : -5 * direction;
+        ctx.lineTo(startX + offset, startY + i);
+      }
+      ctx.stroke();
+    }
+
+    // Add zigzag borders on both sides of center pattern
+    drawZigzagBorder(160, 80, 200, 1, "#000");
+    drawZigzagBorder(240, 80, 200, -1, "#000");
+
+    // V-neckline detail
+    function drawNeckline() {
+      const centerX = 200;
+      const topY = 20;
+      const neckWidth = 100;
+      const neckDepth = 50;
+      const colors = ["#FF4500", "#008000", "#FFD700"];
+
+      for (let i = 0; i < colors.length; i++) {
+        ctx.beginPath();
+        ctx.moveTo(centerX - neckWidth / 2 + i * 5, topY + i * 5);
+        ctx.lineTo(centerX, topY + neckDepth + i * 5);
+        ctx.lineTo(centerX + neckWidth / 2 - i * 5, topY + i * 5);
+        ctx.strokeStyle = colors[i];
+        ctx.lineWidth = 3;
+        ctx.stroke();
+      }
+    }
+
+    drawNeckline();
+
+  </script>
+</body>
+</html>

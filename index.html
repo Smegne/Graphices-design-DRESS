@@ -1,0 +1,863 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DRESS PATTERN DESIGN</title>
+    <style>
+        #canvas {
+            background: #fdfbf8;
+           
+        margin: auto;
+            display: block;
+            border: 1px solid #ccc; 
+           
+        }
+    </style>
+</head>
+<body>
+    <!-- CREATE CANVAS TAG -->
+    <canvas id="canvas" width="1000" height="1200" style="border:1px solid #000000;"></canvas>
+    <!-- draw to vertical and parrel lines at center -->
+    <script>
+        const canvas = document.getElementById('canvas');
+        const ctx = canvas.getContext('2d');
+    // Draw the first vertical line
+    ctx.beginPath();
+    ctx.moveTo(270, 205); // Start point (x: 270, y: 0)
+    ctx.lineTo(270, 700); // End point (x: 270, y: 600)
+    ctx.strokeStyle = 'RED';
+    ctx.lineWidth = 5;
+    ctx.stroke();
+
+    // Draw the second vertical line
+    ctx.beginPath();
+    ctx.moveTo(350, 205); // Start point (x: 330, y: 0)
+    ctx.lineTo(350, 700); // End point (x: 330, y: 600)
+    ctx.strokeStyle = 'RED';
+    ctx.lineWidth = 5;
+    ctx.stroke();
+//Draw the third  slant line
+    ctx.beginPath();
+    ctx.moveTo(270, 700); // Start point (x: 330, y: 0)
+    ctx.lineTo(310, 730); // End point (x: 330, y: 600)
+    ctx.strokeStyle = 'RED';
+    ctx.lineWidth = 5;
+    ctx.stroke();
+
+    
+    // Draw the 4 th  slant line
+    ctx.beginPath();
+    ctx.moveTo(350, 700); // Start point (x: 330, y: 0)
+    ctx.lineTo(310, 730); // End point (x: 330, y: 600)
+    ctx.strokeStyle = 'RED';
+    ctx.lineWidth = 5;
+    ctx.stroke();
+
+    //pattern v
+    function drawSlantLine(ctx, startX, startY, endX, endY, lineWidth , color) {
+        ctx.beginPath();
+        ctx.moveTo(startX, startY);
+        ctx.lineTo(endX, endY);
+        ctx.strokeStyle = color || 'black'; // Default color is black
+      
+        ctx.lineWidth = lineWidth;
+        ctx.stroke();
+    }
+
+    // Use the function to draw the pattern
+    drawSlantLine(ctx, 270, 690, 310, 720, 10, 'green');
+    drawSlantLine(ctx, 350, 690, 310, 720, 10, 'green');
+    drawSlantLine(ctx, 270, 680, 310, 710, 10, 'green');
+    drawSlantLine(ctx, 350, 680, 310, 710, 10, 'green');
+    drawSlantLine(ctx, 350, 670, 310, 700, 10, 'green');
+    drawSlantLine(ctx, 270, 670, 310, 700, 10, 'green');
+    drawSlantLine(ctx, 270, 660, 310, 690, 10,   'green');  
+    drawSlantLine(ctx, 350, 660, 310, 690, 10, 'green');
+    drawSlantLine(ctx, 270, 650, 310, 680, 10, 'green');
+    drawSlantLine(ctx, 350, 650, 310, 680, 10, 'green');
+    drawSlantLine(ctx, 270, 640, 310, 670, 10, 'yellow');
+   
+    drawSlantLine(ctx, 350, 640, 310, 670, 10, 'yellow');
+    drawSlantLine(ctx, 270, 630, 310, 660, 10, 'yellow');
+
+    drawSlantLine(ctx, 350, 630, 310, 660, 10, 'yellow');
+
+    drawSlantLine(ctx, 270, 620, 310, 650, 10, 'yellow');
+    drawSlantLine(ctx, 350, 620, 310, 650, 10, 'yellow');  
+    drawSlantLine(ctx, 270, 610, 310, 640, 10, 'yellow');
+    drawSlantLine(ctx, 350, 610, 310, 640, 10, 'yellow');  
+    drawSlantLine(ctx, 270, 600, 310, 630, 10, 'yellow');
+    drawSlantLine(ctx, 350, 600, 310, 630, 10, 'yellow');
+    drawSlantLine(ctx, 270, 590, 310, 620, 10, 'red');
+    drawSlantLine(ctx, 350, 590, 310, 620, 10, 'red');
+    drawSlantLine(ctx, 270, 580, 310, 610, 10, 'red');
+    drawSlantLine(ctx, 350, 580, 310, 610, 10, 'red');
+    drawSlantLine(ctx, 270, 570, 310, 600, 10, 'red');  
+    drawSlantLine(ctx, 350, 570, 310, 600, 10, 'red');
+    drawSlantLine(ctx, 270, 560, 310, 590, 10, 'red');
+    drawSlantLine(ctx, 350, 560, 310, 590, 10   , 'red');
+    drawSlantLine(ctx, 270, 550, 310, 580, 10, 'red');
+    drawSlantLine(ctx, 350, 550, 310, 580, 10, 'red');
+    drawSlantLine(ctx, 270, 540, 310, 570, 10, 'blue');
+    drawSlantLine(ctx, 350, 540, 310, 570, 10, 'blue');
+    drawSlantLine(ctx, 270, 530, 310, 560, 10, 'blue');
+    drawSlantLine(ctx, 350, 530, 310, 560, 10, 'blue');
+    drawSlantLine(ctx, 270, 520, 310, 550, 10, 'blue');
+    drawSlantLine(ctx, 350, 520, 310, 550, 10, 'blue');
+    drawSlantLine(ctx, 270, 510, 310, 540, 10, 'blue');
+    drawSlantLine(ctx, 350, 510, 310, 540, 10, 'blue');
+    drawSlantLine(ctx, 270, 500, 310, 530, 10   , 'blue');
+    drawSlantLine(ctx, 350, 500, 310, 530, 10, 'blue');
+    // drawSlantLine(ctx, 270, 490, 310, 520, 1);
+    // drawSlantLine(ctx, 350, 490, 310, 520, 1);
+    // drawSlantLine(ctx, 270, 480, 310, 510, 1);
+    // drawSlantLine(ctx, 350, 480, 310, 510, 1);
+    // drawSlantLine(ctx, 270, 470, 310, 500, 1);
+    // drawSlantLine(ctx, 350, 470, 310, 500, 1);
+    // drawSlantLine(ctx, 270, 460, 310, 490, 1);
+    // drawSlantLine(ctx, 350, 460, 310, 490, 1);
+    // drawSlantLine(ctx, 270, 450, 310, 480, 1);
+    // drawSlantLine(ctx, 350, 450, 310, 480, 1);
+    // drawSlantLine(ctx, 270, 440, 310, 470, 1);
+    // drawSlantLine(ctx, 350, 440, 310, 470, 1);
+    // drawSlantLine(ctx, 270, 430, 310, 460, 1);
+    // drawSlantLine(ctx, 350, 430, 310, 460, 1);
+    // drawSlantLine(ctx, 270, 420, 310, 450, 1);
+    // drawSlantLine(ctx, 350, 420, 310, 450, 1);
+    // drawSlantLine(ctx, 270, 410, 310, 440, 1);
+    // drawSlantLine(ctx, 350, 410, 310, 440, 1);
+    // drawSlantLine(ctx, 270, 400, 310, 430, 1);
+    // drawSlantLine(ctx, 350, 400, 310, 430, 1);
+    // drawSlantLine(ctx, 270, 390, 310, 420, 1);
+    // drawSlantLine(ctx, 350, 390, 310, 420, 1);
+    // drawSlantLine(ctx, 290, 380, 310, 410, 1);
+    // drawSlantLine(ctx, 330, 380, 310, 410, 1);
+// VANDM
+    drawSlantLine(ctx, 290, 370, 310, 400, 10, 'black');
+    drawSlantLine(ctx, 330, 370, 310, 400, 10, 'black');
+
+
+    drawSlantLine(ctx, 290, 370, 270, 390, 10, 'blue');
+    drawSlantLine(ctx, 330, 370, 350, 390, 10, 'blue');
+//MMMMMMMMMMMMMMMMMM
+
+    drawSlantLine(ctx, 290, 360, 310, 390, 10, 'green');
+    drawSlantLine(ctx, 330, 360, 310, 390, 10, 'green');
+
+    drawSlantLine(ctx, 290, 360, 270, 380, 10, 'red');
+    drawSlantLine(ctx, 330, 360, 350, 380, 10, 'red');
+    drawSlantLine(ctx, 290, 350, 310, 380, 10, 'green');
+    drawSlantLine(ctx, 330, 350, 310, 380, 10, 'green');
+    drawSlantLine(ctx, 290, 350, 270, 370, 10, 'red');
+    drawSlantLine(ctx, 330, 350, 350, 370, 10, 'red');
+    drawSlantLine(ctx, 290, 340, 310, 370, 10, 'green');
+    drawSlantLine(ctx, 330, 340, 310, 370, 10, 'green');
+    drawSlantLine(ctx, 290, 340, 270, 360, 10, 'red');
+    drawSlantLine(ctx, 330, 340, 350, 360, 10, 'red');
+    drawSlantLine(ctx, 290, 330, 310, 360, 10, 'yellow');
+    drawSlantLine(ctx, 330, 330, 310, 360, 10, 'yellow');
+
+
+    drawSlantLine(ctx, 290, 330, 270, 350, 10, 'blue');
+    drawSlantLine(ctx, 330, 330, 350, 350, 10, 'blue');
+    drawSlantLine(ctx, 290, 320, 310, 350, 10, 'yellow');
+    drawSlantLine(ctx, 330, 320, 310, 350, 10, 'yellow');
+    drawSlantLine(ctx, 290, 320, 270, 340, 10, 'blue');
+    drawSlantLine(ctx, 330, 320, 350, 340, 10, 'blue');
+    drawSlantLine(ctx, 290, 310, 310, 340, 10, 'yellow');
+    drawSlantLine(ctx, 330, 310, 310, 340, 10, 'yellow');
+    drawSlantLine(ctx, 290, 310, 270, 330, 10, 'blue');
+    drawSlantLine(ctx, 330, 310, 350, 330, 10, 'blue');
+
+    //cross line
+    drawSlantLine(ctx, 290, 310, 310, 285, 10, 'GREEN');
+    drawSlantLine(ctx, 330, 310, 310, 285, 10, 'GREEN');
+    drawSlantLine(ctx, 290, 300, 310, 275, 10, 'GREEN');
+    drawSlantLine(ctx, 330, 300, 310, 275, 10, 'GREEN');
+    drawSlantLine(ctx, 290, 300, 310, 320, 10, 'GREEN');
+    drawSlantLine(ctx, 330, 300, 310, 320, 10, 'GREEN');
+    drawSlantLine(ctx, 290, 290, 310, 310, 10, 'GREEN');
+    drawSlantLine(ctx, 330, 290, 310, 310, 10, 'GREEN');
+
+    drawSlantLine(ctx, 290, 290, 310, 265, 10, 'blue ');
+    drawSlantLine(ctx, 330, 290, 310, 265, 10, 'blue ');
+    drawSlantLine(ctx, 290, 280, 310, 255, 10, 'blue ');
+    drawSlantLine(ctx, 330, 280, 310, 255, 10, 'blue ');  
+    drawSlantLine(ctx, 290, 280, 310, 280, 10, 'blue ');
+    drawSlantLine(ctx, 330, 280, 310, 280, 10, 'blue ');
+    
+    // drawSlantLine FOR NECK
+
+    drawSlantLine(ctx, 310, 260, 178, 110, 8, 'blue ');
+    drawSlantLine(ctx, 310, 260, 437, 112, 8, 'blue ');
+    
+ // Draw the first vertical line
+ ctx.beginPath();
+    ctx.moveTo(270, 220); // Start point (x: 270, y: 0)
+    ctx.lineTo(270, 700); // End point (x: 270, y: 600)
+    ctx.strokeStyle = 'red';
+    ctx.lineWidth = 2;
+    ctx.stroke();
+
+    // Draw the second vertical line
+    ctx.beginPath();
+    ctx.moveTo(350, 220); // Start point (x: 330, y: 0)
+    ctx.lineTo(350, 700); // End point (x: 330, y: 600)
+    ctx.strokeStyle = 'red';
+    ctx.lineWidth = 2;
+    ctx.stroke();
+    
+    // drawslantline in overall
+    
+
+
+drawSlantZigzag(ctx, 250, 700, 310, 750, 5, 'blue');
+drawSlantZigzag(ctx, 250, 700, 310, 750, 10, 10,5,'blue');
+    // drawSlantLine(ctx, 370, 700, 310, 750, 5, 'blue');
+    drawSlantZigzag(ctx, 370, 700, 310, 750, 10, 10,5,'blue');
+
+    // drawSlantLine(ctx, 230, 700, 300, 760, 5, 'red');
+    // drawSlantLine(ctx, 390, 700, 320, 760, 5, 'red');
+
+     drawSlantZigzag(ctx, 230, 700, 300, 760, 10, 10,4,'black');
+    drawSlantZigzag(ctx, 390, 700, 320, 760, 10, 10,4,'black');
+
+
+
+    // drawvertical zigzag lines
+
+    function drawVerticalZigzag(ctx, startX, startY, steps, stepHeight, stepWidth, color) {
+  let x = startX;
+  let y = startY;
+
+  for (let i = 0; i < steps; i++) {
+    const direction = i % 2 === 0 ? -stepWidth : stepWidth;
+    drawSlantLine(ctx, x, y, x + direction, y + stepHeight, 8, color);
+    x += direction;
+    y += stepHeight;
+  }
+}
+drawVerticalZigzag(ctx, 250, 180, 52, 10, 24, 'blue');
+drawVerticalZigzag(ctx, 270, 180, 52, 10, 29, 'black');
+drawVerticalZigzag(ctx, 370, 178, 52, 10, 24, 'blue');
+drawVerticalZigzag(ctx, 390, 178, 52, 10, 29, 'black');
+
+drawVerticalZigzag(ctx, 230, 220, 48, 10, 10);
+drawVerticalZigzag(ctx, 390, 220, 48, 10, 10);
+
+
+// draw slant zigzag lines
+    function drawSlantZigzag(ctx, startX, startY, endX, endY, segments, amplitude , lineWidth, color ) {
+    const dx = (endX - startX) / segments;
+    const dy = (endY - startY) / segments;
+
+    ctx.beginPath();
+    ctx.moveTo(startX, startY);
+
+    for (let i = 1; i <= segments; i++) {
+        const x = startX + i * dx;
+        const y = startY + i * dy;
+        const offsetX = (i % 2 === 0) ? -amplitude : amplitude;
+        ctx.lineTo(x + offsetX, y);
+    }
+
+    ctx.strokeStyle = color;
+    ctx.lineWidth = lineWidth;
+    ctx.stroke();
+}
+drawSlantZigzag(ctx, 250, 230, 160, 124, 28, 10,4,'blue'); // Left slant zigzag
+drawSlantZigzag(ctx, 230, 230, 150, 150, 28, 7,4,'black'); // Left slant zigzag
+drawSlantZigzag(ctx, 388, 220, 460, 140, 28, 5,4,'black'); // Right slant zigzag
+drawSlantZigzag(ctx, 385, 200, 450, 120, 28, 5,4,'blue'); // Right slant zigzag
+
+drawSlantZigzag(ctx, 310, 230, 210, 90, 40, 15,3,'red'); // Left slant zigzag
+drawSlantZigzag(ctx, 310, 230, 210, 90, 40, 10,3,'blue'); // Left slant zigzag
+drawSlantZigzag(ctx, 310, 230, 410, 90, 40, 15,3,'red'); // Right slant zigzag
+drawSlantZigzag(ctx, 310, 230, 410, 90, 40, 10,3,'blue'); // 
+
+
+
+drawSlantZigzag(ctx, 310, 190, 390, 80, 40, 10,2,'green'); // Right slant zigzag
+drawSlantZigzag(ctx, 310, 190, 230, 80, 40, 10,2,'green'); // Left slant zigzag
+
+drawSlantZigzag(ctx, 310, 150, 360, 70, 40, 5,2,'green'); // Right slant zigzag
+drawSlantZigzag(ctx, 310, 150, 260, 70, 40, 5); // Left slant zigzag
+
+drawSlantLine(ctx, 310, 130, 350, 65, 5);
+drawSlantLine(ctx, 310, 130, 270, 65, 5);
+
+
+// curves for handes
+
+    // Start point
+    ctx.moveTo(268, 63);
+
+    // Draw quadratic Bezier curve
+    ctx.quadraticCurveTo(60, 100, 100, 500);
+
+    // Stroke the path
+    ctx.strokeStyle = "blue";
+    ctx.lineWidth = 5;
+    ctx.stroke();
+
+    // Draw control points
+    ctx.fillStyle = "red";
+    ctx.beginPath();
+    ctx.arc(50, 250, 5, 0, 2 * Math.PI); // start
+    ctx.fill();
+
+    ctx.beginPath();
+    ctx.arc(250, 50, 5, 0, 2 * Math.PI); // control
+    ctx.fill();
+
+    ctx.beginPath();
+    ctx.arc(450, 250, 5, 0, 2 * Math.PI); // end
+    ctx.fill();
+    ctx.beginPath();
+    ctx.moveTo(100, 500);
+    ctx.quadraticCurveTo(130, 490, 170, 500);
+    ctx.strokeStyle = "blue";
+    ctx.lineWidth = 5;
+    ctx.stroke();
+    
+    ctx.beginPath();
+    ctx.moveTo(170, 500);
+    ctx.quadraticCurveTo(190, 300, 180, 380);
+    ctx.strokeStyle = "blue";   
+    ctx.lineWidth = 5;
+    ctx.stroke();
+
+    ctx.beginPath();
+    ctx.moveTo(126, 190);
+    ctx.quadraticCurveTo(210, 330, 180, 380);
+    ctx.strokeStyle = "blue";
+    ctx.lineWidth = 5;
+    ctx.stroke();
+    ctx.beginPath();
+    ctx.moveTo(180, 380);
+    ctx.quadraticCurveTo(180, 400, 200, 450);
+    ctx.strokeStyle = "blue";
+    ctx.lineWidth = 5;
+    ctx.stroke();
+
+    ctx.beginPath();
+    ctx.moveTo(200, 490);
+    ctx.quadraticCurveTo(210, 450, 90, 1060);
+    ctx.strokeStyle = "blue";
+    ctx.lineWidth = 5;
+    ctx.stroke();
+
+    // other side
+    ctx.beginPath();    
+    ctx.moveTo(345, 63);
+    ctx.quadraticCurveTo(560, 100, 500, 500);
+    ctx.strokeStyle = "blue";
+    ctx.lineWidth = 5;
+    ctx.stroke();
+
+    ctx.beginPath();
+
+
+    ctx.moveTo(500, 500);
+
+
+
+    ctx.quadraticCurveTo(450, 500, 430, 500);
+    ctx.strokeStyle = "blue";
+    ctx.lineWidth = 5;
+    ctx.stroke();
+    ctx.beginPath();
+    ctx.moveTo(430, 500);
+    ctx.quadraticCurveTo(450, 300, 440, 380);
+    ctx.strokeStyle = "blue";
+    ctx.lineWidth = 5;
+    ctx.stroke();
+
+
+    ctx.beginPath();
+    ctx.moveTo(440, 400);
+    ctx.quadraticCurveTo(430, 400, 410, 450);
+    ctx.strokeStyle = "blue";
+    ctx.lineWidth = 5;
+    ctx.stroke();
+
+    ctx.beginPath();
+    ctx.moveTo(410, 490);
+    ctx.quadraticCurveTo(410, 450, 600, 1050);
+    ctx.strokeStyle = "blue";
+    ctx.lineWidth = 5;
+    ctx.stroke();
+
+    ctx.beginPath();
+    ctx.moveTo(440, 400);   
+    ctx.quadraticCurveTo(390, 400, 490, 200);
+    ctx.strokeStyle = "blue";       
+    ctx.lineWidth = 5;
+    ctx.stroke();
+
+   
+
+    // ctx.quadraticCurveTo(40, 3000, 200, 450);
+    // ctx.strokeStyle = "blue";
+    // ctx.lineWidth = 2;
+    // ctx.stroke();
+
+    ctx.beginPath();
+    ctx.moveTo(410, 450); // Start point (x: 330, y: 0)
+    ctx.lineTo(200, 450); // End point (x: 330, y: 600)
+    ctx.strokeStyle = 'RED';
+    ctx.lineWidth = 5;
+    ctx.stroke();
+
+    ctx.beginPath();
+    ctx.moveTo(410, 490); // Start point (x: 330, y: 0)
+    ctx.lineTo(200, 490); // End point (x: 330, y: 600)
+    ctx.strokeStyle = 'RED';
+    ctx.lineWidth = 5;
+    ctx.stroke();
+
+    ctx.beginPath();
+    ctx.moveTo(200, 450); // Start point (x: 330, y: 0)
+    ctx.lineTo(200, 490); // End point (x: 330, y: 600)
+    ctx.strokeStyle = 'RED';
+    ctx.lineWidth = 2;
+    ctx.stroke();
+
+    ctx.beginPath();
+    ctx.moveTo(410, 450); // Start point (x: 330, y: 0)
+    ctx.lineTo(410, 490); // End point (x: 330, y: 600)
+    ctx.strokeStyle = 'RED';
+    ctx.lineWidth = 2;
+    ctx.stroke();
+
+
+    drawSlantLine(ctx, 390, 450, 520, 750, 10, 'green');
+    drawSlantLine(ctx, 350, 450, 440, 800, 10, 'green');
+
+    drawSlantLine(ctx, 378, 550, 430, 540, 20, 'black');
+    drawSlantLine(ctx, 380, 570, 432, 560, 20, 'green');
+     
+    drawSlantLine(ctx, 380, 570, 432, 560, 20, 'green');
+    drawSlantLine(ctx, 383, 590, 439, 580, 20, 'red');
+    drawSlantLine(ctx, 390, 610, 448, 600, 20, 'yellow');
+    drawSlantLine(ctx, 397, 630, 458, 620, 20, 'blue');
+    drawSlantLine(ctx, 403, 650, 464, 640, 20, 'yellow');
+    drawSlantLine(ctx, 406, 670, 472, 660, 20, 'red');
+    drawSlantLine(ctx, 410, 690, 483, 680, 20, 'green');
+    drawSlantLine(ctx, 415, 710, 493, 700, 20, 'blue');
+    drawSlantLine(ctx, 420, 730, 503, 720, 20, 'yellow');
+
+
+    drawSlantLine(ctx, 430, 730, 450, 797, 3, 'green');
+    drawSlantLine(ctx, 440, 730, 460, 797, 3, 'red');
+    drawSlantLine(ctx, 450, 730, 470, 797, 3, 'red');
+    drawSlantLine(ctx, 460, 730, 480, 797, 3, 'blue');
+    drawSlantLine(ctx, 470, 730, 490, 797, 3, 'blue');
+    drawSlantLine(ctx, 480, 730, 500, 797, 3);
+    drawSlantLine(ctx, 490, 730, 510, 797, 3);
+    drawSlantLine(ctx, 500, 730, 520, 797, 3);
+    drawSlantLine(ctx, 510, 730, 530, 797, 3, 'red');
+    drawSlantLine(ctx, 520, 730, 540, 797, 3, 'red');
+
+    drawSlantLine(ctx, 380, 450, 410, 542, 5, 'red');
+
+    drawSlantLine(ctx, 370, 450, 400, 544, 5, 'green');
+    drawSlantLine(ctx, 360, 450, 390, 546, 3, 'yellow');
+
+    drawSlantLine(ctx, 440, 800, 510, 750, 3);
+
+
+    drawSlantLine(ctx, 300, 760, 280, 790, 8, 'red');
+    drawSlantLine(ctx, 320, 760, 340, 790, 8, 'green');
+
+    drawSlantLine(ctx, 280, 790, 300, 820, 8, 'green');
+    drawSlantLine(ctx, 320, 820, 340, 790, 8, 'red');
+
+    drawSlantLine(ctx, 300, 820, 280, 850, 8, 'blue');  
+    drawSlantLine(ctx, 320, 820, 340, 850, 8, 'blue');
+
+    drawSlantLine(ctx, 280, 850, 300, 880, 8, 'red');
+    drawSlantLine(ctx, 340, 850, 320, 880, 8, 'red');
+    drawSlantLine(ctx, 300, 880, 280, 910, 8, 'green');
+    drawSlantLine(ctx, 320, 880, 340, 910, 8, 'black');
+    drawSlantLine(ctx, 280, 910, 300, 940, 8, 'green');
+    drawSlantLine(ctx, 340, 910, 320, 940, 8,);
+
+
+     drawSlantLine(ctx, 280, 850, 240, 820, 10, 'red');
+    drawSlantLine(ctx, 280, 850, 240, 880, 10, 'red');
+    drawSlantLine(ctx, 340, 850, 370, 820, 10, 'blue');
+    drawSlantLine(ctx, 340, 850, 370, 870, 10, 'blue');
+    drawSlantLine(ctx, 370, 870, 410, 850, 10, 'green');
+    drawSlantLine(ctx, 410, 850, 370, 820, 10, 'green');
+    drawSlantLine(ctx, 370, 870, 410, 850, 10, 'red');
+    drawSlantLine(ctx, 240, 880, 200, 850, 10, 'green');
+    drawSlantLine(ctx, 200, 850, 240, 820, 10, 'blue');
+
+
+   
+    ctx.beginPath();
+    ctx.moveTo(300, 940); // Start point (x: 330, y: 0)
+    ctx.lineTo(300, 970); // End point (x: 330, y: 600)
+    ctx.strokeStyle = 'RED';
+    ctx.lineWidth = 2;
+    ctx.stroke();
+
+    ctx.beginPath();
+    ctx.moveTo(320, 940); // Start point (x: 330, y: 0)
+    ctx.lineTo(320, 970); // End point (x: 330, y: 600)
+    ctx.strokeStyle = 'RED';
+    ctx.lineWidth = 2;
+    ctx.stroke();
+
+    ctx.beginPath();
+    ctx.moveTo(320, 970); // Start point (x: 330, y: 0)
+    ctx.lineTo(300, 970); // End point (x: 330, y: 600)
+    ctx.strokeStyle = 'RED';
+    ctx.lineWidth = 2;
+    ctx.stroke();
+
+   
+
+
+    ctx.beginPath();    
+    ctx.moveTo(90, 1060);
+    ctx.quadraticCurveTo(260, 1200, 600, 1050);
+    ctx.strokeStyle = "blue";
+    ctx.lineWidth = 10;
+    ctx.stroke();
+
+    
+    ctx.beginPath();    
+    ctx.moveTo(90, 1070);
+    ctx.quadraticCurveTo(260, 1200, 600, 1060);
+    ctx.strokeStyle = "green";
+    ctx.lineWidth = 5;
+    ctx.stroke();
+
+
+
+    ctx.beginPath();    
+    ctx.moveTo(110, 950);
+    ctx.quadraticCurveTo(260, 1100, 570, 950);
+    ctx.strokeStyle = "blue";
+    ctx.lineWidth = 10;
+    ctx.stroke();
+
+    ctx.beginPath();    
+    ctx.moveTo(110, 940);
+    ctx.quadraticCurveTo(260, 1100, 570, 940);
+    ctx.strokeStyle = "red";
+    ctx.lineWidth = 10;
+    ctx.stroke();
+
+// function to draw horizontal zigzag lines
+
+    function drawHorizontalZigzag(ctx, startX, startY, segmentLength, amplitude, segments, color = 'black', lineWidth = 1) {
+    ctx.beginPath();
+    ctx.moveTo(startX, startY);
+    
+    for (let i = 0; i < segments; i++) {
+        const x = startX + (i + 1) * segmentLength;
+        const y = (i % 2 === 0) ? startY - amplitude : startY + amplitude;
+        ctx.lineTo(x, y);
+    }
+
+    ctx.strokeStyle = color;
+    ctx.lineWidth = lineWidth;
+    ctx.stroke();
+}
+
+
+
+// drawHorizontalZigzag for bottom design of dress
+
+drawHorizontalZigzag(ctx, 90, 1060, 10, 5, 49, 'blue', 5);
+drawHorizontalZigzag(ctx, 100, 1070, 10, 5, 45, 'blue', 5);
+drawHorizontalZigzag(ctx, 123, 1080, 10, 5, 40, 'blue', 5); 
+drawHorizontalZigzag(ctx, 140, 1090, 10, 5, 37, 'red', 5);
+drawHorizontalZigzag(ctx, 160, 1100, 10, 5, 30, 'red', 5);
+drawHorizontalZigzag(ctx, 180, 1110, 10, 5, 25, 'red', 5); 
+drawHorizontalZigzag(ctx, 195, 1120, 10, 5, 20, 'red', 5);
+
+drawHorizontalZigzag(ctx, 95, 1020, 10, 5, 50, 'GREEN', 5); 
+drawHorizontalZigzag(ctx, 95, 1030, 10, 5, 50, 'GREEN', 8); 
+drawHorizontalZigzag(ctx, 90, 1040, 10, 5, 51, 'GREEN', 8); 
+
+
+drawHorizontalZigzag(ctx, 110, 970, 10, 5, 2, 'blue', 6);
+drawHorizontalZigzag(ctx, 110, 980, 10, 5, 3, 'blue', 5);
+drawHorizontalZigzag(ctx, 100, 990, 10, 5, 5, 'blue', 5);
+drawHorizontalZigzag(ctx, 100, 1000, 10, 5, 7, 'blue', 5);
+drawHorizontalZigzag(ctx, 100, 1010, 10, 5, 10, 'blue', 5);
+
+
+drawHorizontalZigzag(ctx, 400, 1010, 10, 5, 19, 'blue', 5);
+drawHorizontalZigzag(ctx, 440, 1000, 10, 5, 14, 'blue', 5);
+drawHorizontalZigzag(ctx, 460, 990, 10, 5, 12, 'blue', 5);
+drawHorizontalZigzag(ctx, 480, 980, 10, 5, 10, 'blue', 5);      
+drawHorizontalZigzag(ctx, 500, 970, 10, 5, 8, 'blue', 5);
+
+
+// drawHorizontalZigzag(ctx, 190, 420, 10, 5, 23, 'blue', 5);
+// drawHorizontalZigzag(ctx, 190, 430, 10, 5, 23, 'blue', 3);
+// drawHorizontalZigzag(ctx, 195, 440, 10, 5, 22, 'blue', 3);
+
+// drawHorizontalZigzag(ctx, 200, 450, 10, 5, 16, 'blue', 3);
+
+// drawHorizontalZigzag(ctx, 200, 460, 10, 5, 15, 'blue', 3);
+// drawHorizontalZigzag(ctx, 200, 470, 10, 5, 16, 'blue', 3);
+// drawHorizontalZigzag(ctx, 200, 480, 10, 5, 16, 'blue', 3);
+
+
+// drawHorizontalZigzag(ctx, 200, 490, 10, 5, 16, 'blue', 3);
+// drawHorizontalZigzag(ctx, 200, 500, 10, 5, 17, 'blue', 3);
+// drawHorizontalZigzag(ctx, 200, 510, 10, 5, 17, 'blue', 3);
+
+// drawHorizontalZigzag(ctx, 93, 450, 10, 5, 8, 'blue', 3);
+
+// drawHorizontalZigzag(ctx, 93, 480, 10, 5, 8, 'blue', 3);
+
+
+// draw the horizontal lines for left side handle end
+ctx.beginPath();
+    ctx.moveTo(93, 435); // Start point (x: 330, y: 0)
+    ctx.lineTo(174, 435); // End point (x: 330, y: 600)
+    ctx.strokeStyle = 'RED';
+    ctx.lineWidth = 8;
+    ctx.stroke();
+
+
+ctx.beginPath();
+    ctx.moveTo(93, 465); // Start point (x: 330, y: 0)
+    ctx.lineTo(172, 465); // End point (x: 330, y: 600)
+    ctx.strokeStyle = 'RED';
+    ctx.lineWidth = 8;
+    ctx.stroke();
+// drawHorizontalZigzag on left handle end
+
+    drawHorizontalZigzag(ctx, 93, 425, 10, 5, 9, 'blue', 6);
+
+drawHorizontalZigzag(ctx, 93, 455, 10, 5, 8, 'blue', 6);
+drawHorizontalZigzag(ctx, 95, 485, 10, 10, 8, 'blue', );
+
+// function to draw slant leaves
+
+function drawSlantedLeaf(ctx, x, y, width, height, angle = 0, color = 'green') {
+    ctx.save(); // Save the current context
+    ctx.translate(x, y); // Move to leaf center
+    ctx.rotate(angle); // Rotate the canvas by given angle
+
+    ctx.beginPath();
+
+    // Start at (0, 0) after translation
+    ctx.moveTo(0, 0);
+
+    // Left curve
+    ctx.bezierCurveTo(
+        -width / 2, -height / 2,
+        -width / 2, -height,
+        0, -height
+    );
+
+    // Right curve
+    ctx.bezierCurveTo(
+        width / 2, -height,
+        width / 2, -height / 2,
+        0, 0
+    );
+
+    ctx.fillStyle = color;
+    ctx.fill();
+    ctx.strokeStyle = 'darkgreen';
+    ctx.stroke();
+
+    ctx.restore(); // Restore to original state
+
+}
+
+// Draw slanted leaves on the left side of handle
+drawSlantedLeaf(ctx, 160, 380, 10, -30, Math.PI / 6); // 30° slanted leaf
+drawSlantedLeaf(ctx, 160, 360, 10, -30, Math.PI / 6); // 30° slanted leaf
+drawSlantedLeaf(ctx, 160, 340, 10, -30, Math.PI / 6); // 30° slanted leaf
+drawSlantedLeaf(ctx, 160, 320, 10, -30, Math.PI / 6); // 30° slanted leaf
+drawSlantedLeaf(ctx, 160, 300, 10, -30, Math.PI / 6); // 30° slanted leaf
+drawSlantedLeaf(ctx, 160, 280, 10, -30, Math.PI / 6); // 30° slanted leaf
+drawSlantedLeaf(ctx, 160, 260, 10, -30, Math.PI / 6); // 30° slanted leaf
+
+
+drawSlantedLeaf(ctx, 120, 380, 10, -30, -Math.PI / 6); // -30° slanted leaf
+drawSlantedLeaf(ctx, 120, 360, 10, -30, -Math.PI / 6); // -30° slanted leaf
+
+drawSlantedLeaf(ctx, 120, 340, 10, -30, -Math.PI / 6); // -30° slanted leaf
+drawSlantedLeaf(ctx, 120, 320, 10, -30, -Math.PI / 6); // -30° slanted leaf
+drawSlantedLeaf(ctx, 120, 300, 10, -30, -Math.PI / 6); // -30° slanted leaf 
+drawSlantedLeaf(ctx, 120, 280, 10, -30, -Math.PI / 6); // -30° slanted leaf
+drawSlantedLeaf(ctx, 120, 260, 10, -30, -Math.PI / 6); // -30° slanted leaf
+
+// Draw slanted leaves on the centeral node of left side of handle
+drawSlantedLeaf(ctx, 132, 240, 15, -30, -Math.PI / 18); // -30° slanted leaf
+
+//  vertical line for left side leaves
+ctx.beginPath();
+    ctx.moveTo(140, 280); // Start point (x: 330, y: 0)
+    ctx.lineTo(140, 420); // End point (x: 330, y: 600)
+    ctx.strokeStyle = 'black';
+    ctx.lineWidth = 2;
+    ctx.stroke();
+
+// draw horizontal zigzag lines for riht side handle end
+    drawHorizontalZigzag(ctx, 430, 440, 10, 5, 8, 'blue', 3);
+drawHorizontalZigzag(ctx, 430, 470, 10, 5, 8, 'blue', 3);
+drawHorizontalZigzag(ctx, 430, 470, 10, 5, 7, 'blue', 1);
+drawHorizontalZigzag(ctx, 430, 490, 10, 5, 7, 'blue', 3);
+
+// draw horizontal  lines for left side handle end
+ctx.beginPath();
+    ctx.moveTo(430, 450); // Start point (x: 330, y: 0)
+    ctx.lineTo(510, 450); // End point (x: 330, y: 600)
+    ctx.strokeStyle = 'red';
+    ctx.lineWidth = 2;
+    ctx.stroke();
+
+
+    ctx.beginPath();
+    ctx.moveTo(430, 480); // Start point (x: 330, y: 0)
+    ctx.lineTo(510, 480); // End point (x: 330, y: 600)
+    ctx.strokeStyle = 'red';
+    ctx.lineWidth = 2;
+    ctx.stroke();
+
+
+// Draw slanted leaves on the right side of handle 30° slant leave
+
+drawSlantedLeaf(ctx, 490, 410, 10, -30, Math.PI / 6); 
+drawSlantedLeaf(ctx, 490, 390, 10, -30, Math.PI / 6); 
+drawSlantedLeaf(ctx, 490, 370, 10, -30, Math.PI / 6); 
+drawSlantedLeaf(ctx, 490, 350, 10, -30, Math.PI / 6); 
+drawSlantedLeaf(ctx, 490, 330, 10, -30, Math.PI / 6); 
+drawSlantedLeaf(ctx, 490, 310, 10, -30, Math.PI / 6); 
+drawSlantedLeaf(ctx, 490, 290, 10, -30, Math.PI / 6); 
+
+
+drawSlantedLeaf(ctx, 450, 410, 10, -30, -Math.PI / 6); // -30° slanted leaf
+drawSlantedLeaf(ctx, 450, 390, 10, -30, -Math.PI / 6); // -30° slanted leaf
+drawSlantedLeaf(ctx, 450, 370, 10, -30, -Math.PI / 6); // -30° slanted leaf
+drawSlantedLeaf(ctx, 450, 350, 10, -30, -Math.PI / 6); // -30° slanted leaf
+drawSlantedLeaf(ctx, 450, 330, 10, -30, -Math.PI / 6); // -30° slanted leaf
+drawSlantedLeaf(ctx, 450, 310, 10, -30, -Math.PI / 6); // -30° slanted leaf
+drawSlantedLeaf(ctx, 450, 290, 10, -30, -Math.PI / 6); // -30° slanted leaf
+
+
+drawSlantedLeaf(ctx, 462, 270, 15, -30, -Math.PI / 18); // -30° slanted leaf
+
+ctx.beginPath();
+    ctx.moveTo(470, 440); // Start point (x: 330, y: 0)
+    ctx.lineTo(470, 300); // End point (x: 330, y: 600)
+    ctx.strokeStyle = 'black';
+    ctx.lineWidth = 2;
+    ctx.stroke();
+
+// draw slannted leaves on the right side of breast leave
+
+    drawSlantedLeaf(ctx, 430, 340, 10, -30, Math.PI / 4); // 45° slanted leaf
+drawSlantedLeaf(ctx, 430, 320, 10, -30, Math.PI / 4); // 45° slanted leaf
+drawSlantedLeaf(ctx, 430, 300, 10, -30, Math.PI / 4); // 45° slanted leaf
+drawSlantedLeaf(ctx, 430, 280, 10, -30, Math.PI / 4); // 45° slanted leaf
+drawSlantedLeaf(ctx, 430, 260, 10, -30, Math.PI / 4); // 45° slanted leaf
+drawSlantedLeaf(ctx, 430, 240, 10, -30, Math.PI / 4); // 45° slanted leaf
+
+drawSlantedLeaf(ctx, 390, 340, 10, -30, -Math.PI / 6); // -30° slanted leaf
+drawSlantedLeaf(ctx, 390, 320, 10, -30, -Math.PI / 6); // -30° slanted leaf
+drawSlantedLeaf(ctx, 390, 300, 10, -30, -Math.PI / 6); // -30° slanted leaf
+
+drawSlantedLeaf(ctx, 390, 280, 10, -30, -Math.PI / 6); // -30° slanted leaf
+drawSlantedLeaf(ctx, 390, 260, 10, -30, -Math.PI / 6); // -30° slanted leaf
+drawSlantedLeaf(ctx, 390, 240, 10, -30, -Math.PI / 6); // -30° slanted leaf
+
+// draw slannted leaves on the left side of bottom leave
+   drawSlantedLeaf(ctx, 180, 840, 10, -30, Math.PI / 4); // 45° slanted leaf
+drawSlantedLeaf(ctx, 200, 890, 10, -30, Math.PI / 4); // 45° slanted leaf
+drawSlantedLeaf(ctx, 200, 910, 10, -30, Math.PI / 4); // 45° slanted leaf
+drawSlantedLeaf(ctx, 180, 820, 10, -30, Math.PI / 4); // 45° slanted leaf
+drawSlantedLeaf(ctx, 180, 800, 10, -30, Math.PI / 4); // 45° slanted leaf
+drawSlantedLeaf(ctx, 200, 930, 10, -30, Math.PI / 4); // 45° slanted leaf
+
+drawSlantedLeaf(ctx, 180, 800, 10, -30, -Math.PI / 6); // -30° slanted leaf
+drawSlantedLeaf(ctx, 180, 820, 10, -30, -Math.PI / 6); // -30° slanted leaf
+drawSlantedLeaf(ctx, 180, 840, 10, -30, -Math.PI / 6); // -30° slanted leaf
+
+drawSlantedLeaf(ctx, 160, 890, 10, -30, -Math.PI / 6); // -30° slanted leaf
+drawSlantedLeaf(ctx, 160, 910, 10, -30, -Math.PI / 6); // -30° slanted leaf
+drawSlantedLeaf(ctx, 160, 930, 10, -30, -Math.PI / 6); // -30° slanted leaf
+
+// draw slannted leaves on the left  side of breast leave
+
+drawSlantedLeaf(ctx, 220, 240, 10, -30, Math.PI / 4); // 45° slanted leaf
+drawSlantedLeaf(ctx, 220, 260, 10, -30, Math.PI / 4); // 45° slanted leaf
+drawSlantedLeaf(ctx, 220, 280, 10, -30, Math.PI / 4); // 45° slanted leaf
+drawSlantedLeaf(ctx, 220, 300, 10, -30, Math.PI / 4); // 45° slanted leaf
+drawSlantedLeaf(ctx, 220, 320, 10, -30, Math.PI / 4); // 45° slanted leaf
+drawSlantedLeaf(ctx, 220, 340, 10, -30, Math.PI / 4); // 45° slanted leaf
+
+drawSlantedLeaf(ctx, 180, 350, 10, -30, -Math.PI / 6); // -30° slanted leaf
+drawSlantedLeaf(ctx, 180, 330, 10, -30, -Math.PI / 6); // -30° slanted leaf
+drawSlantedLeaf(ctx, 180, 310, 10, -30, -Math.PI / 6); // -30° slanted leaf
+
+drawSlantedLeaf(ctx, 180, 290, 10, -30, -Math.PI / 6); // -30° slanted leaf
+drawSlantedLeaf(ctx, 180, 270, 10, -30, -Math.PI / 6); // -30° slanted leaf
+drawSlantedLeaf(ctx, 180, 250, 10, -30, -Math.PI / 6); // -30° slanted leaf
+
+// draw slannted leaves on the right side of bottom leave
+
+ drawSlantedLeaf(ctx, 440, 820, 10, -30, Math.PI / 4); // 45° slanted leaf
+drawSlantedLeaf(ctx, 440, 840, 10, -30, Math.PI / 4); // 45° slanted leaf
+drawSlantedLeaf(ctx, 440, 860, 10, -30, Math.PI / 4); // 45° slanted leaf
+drawSlantedLeaf(ctx, 460, 900, 10, -30, Math.PI / 4); // 45° slanted leaf
+drawSlantedLeaf(ctx, 460, 920, 10, -30, Math.PI / 4); // 45° slanted leaf
+drawSlantedLeaf(ctx, 460, 940, 10, -30, Math.PI / 4); // 45° slanted leaf
+
+drawSlantedLeaf(ctx, 440, 820, 10, -30, -Math.PI / 6); // -30° slanted leaf
+drawSlantedLeaf(ctx, 440, 840, 10, -30, -Math.PI / 6); // -30° slanted leaf
+drawSlantedLeaf(ctx, 440, 860, 10, -30, -Math.PI / 6); // -30° slanted leaf
+
+drawSlantedLeaf(ctx, 420, 900, 10, -30, -Math.PI / 6); // -30° slanted leaf
+drawSlantedLeaf(ctx, 420, 920, 10, -30, -Math.PI / 6); // -30° slanted leaf
+drawSlantedLeaf(ctx, 420, 940, 10, -30, -Math.PI / 6); // -30° slanted leaf
+
+
+// draw slannted leaves on the left  side of ross at bottom leave
+drawSlantedLeaf(ctx, 220, 760, 10, -30, Math.PI / 4); // 45° slanted leaf
+drawSlantedLeaf(ctx, 210, 760, 10, -30, Math.PI / 4); // 45° slanted leaf
+drawSlantedLeaf(ctx, 200, 760, 10, -30, Math.PI / 4); // 45° slanted leaf
+drawSlantedLeaf(ctx, 190, 760, 10, -30, Math.PI / 4); // 45° slanted leaf
+drawSlantedLeaf(ctx, 180, 760, 10, -30, Math.PI / 4); // 45° slanted leaf
+drawSlantedLeaf(ctx, 230, 760, 10, -30, Math.PI / 4); // 45° slanted leaf
+drawSlantedLeaf(ctx, 240, 760, 10, -30, Math.PI / 4); // 45° 
+// slanted leaf
+drawSlantedLeaf(ctx, 250, 760, 10, -30, Math.PI / 4); // 45° slanted leaf
+drawSlantedLeaf(ctx, 260, 760, 10, -30, Math.PI / 4); // 45° slanted leaf
+drawSlantedLeaf(ctx, 270, 760, 10, -30, Math.PI / 4); // 45° slanted leaf
+drawSlantedLeaf(ctx, 280, 760, 10, -30, Math.PI / 4); // 45° slanted leaf
+drawSlantedLeaf(ctx, 290, 760, 10, -30, Math.PI / 4); // 45° slanted leaf
+drawSlantedLeaf(ctx, 220, 760, 10, -30, -Math.PI / 6); // -30° slanted leaf
+drawSlantedLeaf(ctx, 210, 760, 10, -30, -Math.PI / 6); // -30° slanted leaf
+drawSlantedLeaf(ctx, 200, 760, 10, -30, -Math.PI / 6); // -30° slanted leaf
+drawSlantedLeaf(ctx, 190, 760, 10, -30, -Math.PI / 6); // -30° slanted leaf
+
+drawSlantedLeaf(ctx, 180, 760, 10, -30, -Math.PI / 6); // -30° slanted leaf
+drawSlantedLeaf(ctx, 230, 760, 10, -30, -Math.PI / 6); // -30° slanted leaf
+drawSlantedLeaf(ctx, 240, 760, 10, -30, -Math.PI / 6); // -30° slanted leaf
+drawSlantedLeaf(ctx, 250, 760, 10, -30, -Math.PI / 6); // -30° slanted leaf
+drawSlantedLeaf(ctx, 260, 760, 10, -30, -Math.PI / 6); // -30° slanted leaf
+drawSlantedLeaf(ctx, 270, 760, 10, -30, -Math.PI / 6); // -30° slanted leaf
+drawSlantedLeaf(ctx, 280, 760, 10, -30, -Math.PI / 6); // -30° slanted leaf
+drawSlantedLeaf(ctx, 290, 760, 10, -30, -Math.PI / 6); // -30° slanted leaf
+
+
+
+
+        </script>
+</body>
+</html>
